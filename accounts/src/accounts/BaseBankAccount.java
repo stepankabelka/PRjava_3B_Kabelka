@@ -9,7 +9,7 @@ public class BaseBankAccount {
 
     private Customer customer;
 
-    private double balance;
+    public double balance;
 
     public BaseBankAccount(String uuid, String bankAccountNumber, Customer customer, double balance) {
         this.uuid = uuid;
@@ -18,16 +18,10 @@ public class BaseBankAccount {
         this.balance = balance;
     }
 
-    public void  addBalance(double amount){
-        this.balance += amount;
-    }
-    public void subBalance(double amount) {
-        if(this.balance - amount < 0){
-            System.out.println("not enough money for transaction");
-        }else {
-            this.balance -= amount;
-        }
-    }
+
+
+
+
     public String getUuid() {
         return uuid;
     }
@@ -40,5 +34,7 @@ public class BaseBankAccount {
     public double getBalance() {
         return balance;
     }
+
+
 }
 //test
