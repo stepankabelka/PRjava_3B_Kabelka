@@ -1,13 +1,13 @@
-package card;
+package cz.stepan.card;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PaymentCardStorageService {
 
-    static List<PaymentCard>  allCards = new ArrayList<PaymentCard>();
+    List<PaymentCard>  allCards = new ArrayList<PaymentCard>();
 
-    public static List<PaymentCard> getCards() {
+    public List<PaymentCard> getCards() {
         return allCards;
     }
 

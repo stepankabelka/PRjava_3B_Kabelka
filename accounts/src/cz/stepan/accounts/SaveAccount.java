@@ -1,6 +1,6 @@
-package accounts;
+package cz.stepan.accounts;
 
-import persons.customers.Customer;
+import cz.stepan.customers.Customer;
 
 
 

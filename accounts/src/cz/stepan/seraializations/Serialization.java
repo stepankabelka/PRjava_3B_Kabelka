@@ -1,4 +1,4 @@
-package seraializations;
+package cz.stepan.seraializations;
 
 public interface Serialization {
 

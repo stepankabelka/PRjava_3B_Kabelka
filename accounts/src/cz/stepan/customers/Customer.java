@@ -1,4 +1,4 @@
-package persons.customers;
+package cz.stepan.customers;
 
 public class Customer {
 
@@ -24,4 +24,5 @@ public class Customer {
     public String getLastName() {
         return lastName;
     }
+    public String getFullName() {return firstName + " " + lastName;}
 }

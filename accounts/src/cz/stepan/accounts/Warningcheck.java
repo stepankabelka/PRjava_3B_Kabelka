@@ -1,11 +1,10 @@
-package accounts;
+package cz.stepan.accounts;
 
 import java.io.Console;
-import java.io.IOException;
 import java.util.Objects;
 
 public class Warningcheck {
-    public static void Check(double amount)
+    public void Check(double amount)
     {
         if (amount <= 0)
         {

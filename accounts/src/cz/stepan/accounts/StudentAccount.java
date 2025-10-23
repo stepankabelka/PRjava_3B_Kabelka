@@ -1,12 +1,12 @@
-package accounts;
+package cz.stepan.accounts;
 
-import persons.customers.Customer;
+import cz.stepan.customers.Customer;
 
-public class StudentAccount extends BankAccountWithPaymentCards {
+public class StudentAccount extends BankAccount {
     private final String SchoolName;
 
     public StudentAccount(String uuid, String bankAccountNumber, Customer customer, String SchoolName) {
-        super(uuid, bankAccountNumber, customer, 0);
+        super(uuid, bankAccountNumber, customer);
         this.SchoolName = SchoolName;
     }
 

@@ -1,15 +1,16 @@
-package accounts;
+package cz.stepan.accounts;
 
-import card.PaymentCard;
-import persons.customers.Customer;
+import cz.stepan.card.PaymentCard;
+import cz.stepan.customers.Customer;
 
-import javax.smartcardio.Card;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BankAccount extends BankAccountWithPaymentCards {
+public class BankAccount extends BaseBankAccount {
 
     public List<PaymentCard> cards;
+
+
 
         public BankAccount(String uuid, String bankAccountNumber, Customer customer) {
             super(uuid, bankAccountNumber, customer, 0);

@@ -1,6 +1,6 @@
-package card;
+package cz.stepan.card;
 
-import accounts.BankAccount;
+import cz.stepan.accounts.BankAccount;
 
 public class PaymentCardFactory {
 
@@ -9,7 +9,7 @@ public class PaymentCardFactory {
     PaymentCardCvvGenerator paymentCardCvvGenerator = new PaymentCardCvvGenerator();
 
     public PaymentCard createCard(String owner, BankAccount bankAccount) {
-        String cardNumber = paymentCardNumberGenerator.generateCardNumber();
+        String cardNumber = paymentCardNumberGenerator.generateCardNumber(16);
         String cvv = paymentCardCvvGenerator.generateCvv();
         String expireMonth = paymentCardExpireCalculator.calculateMonthExpire();
         String expireYear = paymentCardExpireCalculator.calculateYearExpire();

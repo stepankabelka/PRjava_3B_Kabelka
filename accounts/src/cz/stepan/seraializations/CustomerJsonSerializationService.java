@@ -1,7 +1,7 @@
-package seraializations;
+package cz.stepan.seraializations;
 
 import com.google.gson.Gson;
-import persons.customers.Customer;
+import cz.stepan.customers.Customer;
 
 public class CustomerJsonSerializationService implements Serialization{
 
