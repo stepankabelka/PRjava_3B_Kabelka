@@ -1,12 +1,19 @@
 package cz.stepan.card;
 
+import com.google.inject.Inject;
 import cz.stepan.accounts.BankAccount;
 
-public class PaymentCardFactory {
 
-    PaymentCardNumberGenerator paymentCardNumberGenerator = new PaymentCardNumberGenerator();
-    PaymentCardExpireCalculator paymentCardExpireCalculator = new PaymentCardExpireCalculator();
-    PaymentCardCvvGenerator paymentCardCvvGenerator = new PaymentCardCvvGenerator();
+
+public class PaymentCardFactory {
+    @Inject
+    public PaymentCardCvvGenerator paymentCardCvvGenerator;
+
+    @Inject
+    public PaymentCardExpireCalculator paymentCardExpireCalculator;
+
+    @Inject
+    public PaymentCardNumberGenerator paymentCardNumberGenerator;
 
     public PaymentCard createCard(String owner, BankAccount bankAccount) {
         String cardNumber = paymentCardNumberGenerator.generateCardNumber(16);

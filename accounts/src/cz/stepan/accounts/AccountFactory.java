@@ -1,12 +1,14 @@
 package cz.stepan.accounts;
 
+import com.google.inject.Inject;
 import cz.stepan.generators.AccnumGen;
 import cz.stepan.customers.Customer;
 
 public class AccountFactory {
 
+        @Inject
+        public AccnumGen accnumGen;
 
-        AccnumGen accnumGen = new AccnumGen();
 
         public BaseBankAccount createBaseBankAccount(String uuid, Customer customer, double balance) {
             String accountNumber = accnumGen.generateAccountNumber();

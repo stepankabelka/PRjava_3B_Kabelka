@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="google.code.gson" level="application" />
     <orderEntry type="library" name="thoughtworks.xstream" level="application" />
+    <orderEntry type="library" name="google.inject.guice" level="project" />
   </component>
 </module>

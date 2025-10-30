@@ -1,12 +1,13 @@
 package cz.stepan.card;
 
+import com.google.inject.Singleton;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Singleton
 public class PaymentCardLogger {
-
 
     public List<String> log = new ArrayList<>();
 

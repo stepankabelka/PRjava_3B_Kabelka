@@ -1,18 +1,18 @@
 package cz.stepan.accounts;
 
-import cz.stepan.card.PaymentCardService;
-import com.sun.tools.javac.Main;
+import com.google.inject.Inject;
+import cz.stepan.card.PaymentCardLogger;
 
-import static cz.stepan.Main.paymentCardLogger;
+
+
 
 public class AccountService {
-    PaymentCardService paymentCardService =  new PaymentCardService();
-    Warningcheck warningcheck = new Warningcheck();
 
-    public void Check(double amount)
-    {
-        warningcheck.Check(amount);
-    }
+    @Inject
+    public Warningcheck warningcheck;
+    @Inject
+    public PaymentCardLogger paymentCardLogger;
+
     public void addBalance(double amount, BaseBankAccount account){
         warningcheck.Check(amount);
         account.balance += amount;
