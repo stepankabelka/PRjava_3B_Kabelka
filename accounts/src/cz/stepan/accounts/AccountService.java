@@ -2,9 +2,9 @@ package cz.stepan.accounts;
 
 import com.google.inject.Inject;
 import cz.stepan.card.PaymentCardLogger;
+import cz.stepan.customers.Customer;
 
-
-
+import java.util.List;
 
 public class AccountService {
 
@@ -12,6 +12,10 @@ public class AccountService {
     public Warningcheck warningcheck;
     @Inject
     public PaymentCardLogger paymentCardLogger;
+    @Inject
+    public AccountFactory accountFactory;
+    @Inject
+    public AccountStorageService accountStorageService;
 
     public void addBalance(double amount, BaseBankAccount account){
         warningcheck.Check(amount);
@@ -26,5 +30,11 @@ public class AccountService {
             account.balance -= amount;
         }
         paymentCardLogger.logBalance(false,account.getBankAccountNumber(), amount);
+    }
+
+    public void addSaveBankAccount(String uuid, Customer customer, float interestRate) {
+        List<SaveAccount> sAccounts = accountStorageService.getSaveAccounts();
+        SaveAccount account = accountFactory.createSaveAccount(uuid, customer, interestRate);
+        sAccounts.add(account);
     }
 }
