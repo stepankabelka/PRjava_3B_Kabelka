@@ -1,6 +1,6 @@
 package cz.stepan.accounts;
 
-import cz.stepan.card.PaymentCard;
+import cz.stepan.card.creation.PaymentCard;
 import cz.stepan.customers.Customer;
 
 import java.util.ArrayList;

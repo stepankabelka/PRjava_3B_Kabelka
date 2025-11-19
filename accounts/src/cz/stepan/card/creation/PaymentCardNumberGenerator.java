@@ -1,4 +1,4 @@
-package cz.stepan.card;
+package cz.stepan.card.creation;
 import java.security.SecureRandom;
 
 public class PaymentCardNumberGenerator {

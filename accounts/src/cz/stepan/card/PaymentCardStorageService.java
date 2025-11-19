@@ -1,5 +1,7 @@
 package cz.stepan.card;
 
+import cz.stepan.card.creation.PaymentCard;
+
 import java.util.ArrayList;
 import java.util.List;
 

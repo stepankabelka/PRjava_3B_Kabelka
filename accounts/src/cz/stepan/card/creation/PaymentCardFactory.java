@@ -1,8 +1,8 @@
-package cz.stepan.card;
+package cz.stepan.card.creation;
 
 import com.google.inject.Inject;
 import cz.stepan.accounts.BankAccount;
-
+import cz.stepan.card.PaymentCardExpireCalculator;
 
 
 public class PaymentCardFactory {

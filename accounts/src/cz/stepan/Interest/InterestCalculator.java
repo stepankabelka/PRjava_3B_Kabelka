@@ -4,6 +4,6 @@ import cz.stepan.accounts.SaveAccount;
 
 public class InterestCalculator {
     public double calculate(SaveAccount saveAccount) {
-        return saveAccount.getBalance() / 100 * saveAccount.getInterestRate();
+        return saveAccount.balance + saveAccount.balance / 100 * saveAccount.getInterestRate();
     }
 }

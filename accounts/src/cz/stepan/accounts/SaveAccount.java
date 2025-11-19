@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 public class SaveAccount extends BaseBankAccount {
     private final float interestRate;
-    private LocalDateTime nextInterestDate;
+    public LocalDateTime nextInterestDate;
 
     public SaveAccount(String uuid, String bankAccountNumber, Customer customer, float interestRate, LocalDateTime nextInterestDate) {
         super(uuid, bankAccountNumber, customer, 0);

@@ -3,6 +3,7 @@ package cz.stepan;
 import com.google.inject.Inject;
 import cz.stepan.Interest.Cron;
 import cz.stepan.accounts.*;
+import cz.stepan.accounts.transferEntries.AccTransferEntryCronService;
 import cz.stepan.card.PaymentCardLogger;
 import cz.stepan.card.PaymentCardService;
 import cz.stepan.customers.Customer;
@@ -25,6 +26,8 @@ public class App {
 
     @Inject
     public Cron cron;
+    @Inject
+    public AccTransferEntryCronService accTransferEntryCronService;
 
     public void run(){
 
@@ -50,6 +53,7 @@ public class App {
         account.getCards().forEach(card -> System.out.println(card.getCardNumber() + " " + card.getBankAccount().getBankAccountNumber()));
         paymentCardLogger.showLog();
         cron.start();
+        accTransferEntryCronService.start();
 
     }
 }

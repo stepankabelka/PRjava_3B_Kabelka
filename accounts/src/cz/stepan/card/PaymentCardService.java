@@ -1,8 +1,9 @@
 package cz.stepan.card;
 
 import com.google.inject.Inject;
-import cz.stepan.Main;
 import cz.stepan.accounts.BankAccount;
+import cz.stepan.card.creation.PaymentCard;
+import cz.stepan.card.creation.PaymentCardFactory;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;

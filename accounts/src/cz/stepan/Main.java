@@ -9,7 +9,7 @@ import cz.stepan.customers.Customer;
 
 public class Main {
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
         Injector injector = Guice.createInjector(new BankInjector());
         App app = injector.getInstance(App.class);
         app.run();

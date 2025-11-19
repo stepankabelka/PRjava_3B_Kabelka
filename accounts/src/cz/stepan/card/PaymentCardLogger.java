@@ -5,6 +5,7 @@ import com.google.inject.Singleton;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @Singleton
 public class PaymentCardLogger {
@@ -23,14 +24,17 @@ public class PaymentCardLogger {
 
     }
 
-    public void logBalance(boolean add, String bankAccNum, double amount) {
+    public void logBalance(String type, String bankAccNum, double amount) {
         LocalDate time = LocalDate.now();
-        if (add)
+        if (Objects.equals(type, "add"))
         {
             log.add("obnos " + amount + " byl přidán do účtu " + bankAccNum + " v " + time);
         }
-        else {
+        else if (Objects.equals(type, "sub")) {
             log.add("obnos " + amount + " byl odstraněn z účtu " + bankAccNum + " v " + time);
+        }
+        else {
+            log.add("obnos " + amount + " byl úrokem  přidán na účet " + bankAccNum + " v " + time);
         }
 
     }

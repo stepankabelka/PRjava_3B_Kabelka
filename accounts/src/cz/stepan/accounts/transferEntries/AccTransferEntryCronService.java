@@ -1,4 +1,4 @@
-package cz.stepan.Interest;
+package cz.stepan.accounts.transferEntries;
 
 import com.google.inject.Inject;
 import jakarta.inject.Singleton;
@@ -7,22 +7,19 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Singleton
-public class Cron {
-
+public class AccTransferEntryCronService {
     @Inject
-    private InterestRunnerFacade interestRunnerFacade;
+    private AccTransferEntryFacade accTransferEntryFacade;
 
     @Inject
     private ScheduledExecutorService scheduler;
 
-
     public void start(){
         scheduler.scheduleAtFixedRate(
-                interestRunnerFacade::processAllInterests,
-                1,
+                accTransferEntryFacade::writeAllEntries,
+                0,
                 5,
-                TimeUnit.SECONDS
+                TimeUnit.MINUTES
         );
     }
-
 }

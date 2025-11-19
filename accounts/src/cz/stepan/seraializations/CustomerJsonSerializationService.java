@@ -1,9 +1,12 @@
 package cz.stepan.seraializations;
 
 import com.google.gson.Gson;
+import com.google.inject.Singleton;
 import cz.stepan.customers.Customer;
-
+@Singleton
 public class CustomerJsonSerializationService implements Serialization{
+
+
 
     CustomerSerializationFactory csf = new CustomerSerializationFactory();
     Gson gson = new Gson();
