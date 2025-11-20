@@ -1,7 +1,6 @@
 package cz.stepan.accounts.transferEntries;
 
 import com.google.gson.Gson;
-import cz.stepan.accounts.AccountStorageService;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 
